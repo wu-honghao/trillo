@@ -117,6 +117,7 @@
 
         color: var(--color-grey-light-1);
         text-transform: uppercase;
+        font-size: 1.4rem;
 
         position: relative;
 
@@ -173,4 +174,97 @@
 .legal {
     padding: 1.5rem;
     text-align: center;
+}
+
+.gallery {
+    display: flex;
+
+    &__photo {
+        width: 100%;
+        vertical-align: bottom;
+    }
+}
+
+.overview {
+    height: 7rem;
+    background-color: #fff;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &__stars {
+        margin-right: auto;
+    }
+
+    &__icon-star,
+    &__icon-location {
+        width: 1.75rem;
+        height: 1.75rem;
+
+        fill: var(--color-primary);
+    }
+
+    &__heading {
+        text-transform: uppercase;
+        padding: 3rem;
+        font-size: 1.8rem;
+        letter-spacing: 1.6px;
+    }
+
+    &__location {
+        display: flex;
+    }
+
+    &__rating {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        margin-left: 2rem;
+        align-self: stretch;
+        padding: 1rem 1.5rem;
+
+        background-color: var(--color-primary);
+        color: var(--color-grey-light-1);
+        text-transform: uppercase;
+
+        &-average {
+            font-size: 1.8rem;
+        }
+    }
+}
+
+.btn {
+    &_inline {
+        color: var(--color-primary);
+        border: none;
+        background-color: transparent;
+        border-bottom: 1px solid var(--color-primary);
+
+        &:focus {
+            outline: none;
+            animation: pulsate 0.4s infinite;
+        }
+    }
+}
+
+@keyframes pulsate {
+    0% {
+        transform: scale(1);
+        box-shadow: none;
+    }
+
+    50% {
+        transform: scale(1.05);
+        box-shadow: 0 1rem 4rem rgba(0, 0, 0, 0.25);
+    }
+
+    100% {
+        transform: scale(1);
+        box-shadow: none;
+    }
+}
+
+.details {
+    background-color: var(--color-grey-light-1);
 }
