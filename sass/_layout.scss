@@ -1,12 +1,8 @@
 .container {
-    min-height: 50vh;
-    width: 90%;
+    width: 1220px;
     background-color: var(--color-grey-light-1);
     box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
+    margin: 10rem auto;
 }
 
 .header {
