@@ -6,6 +6,15 @@
     justify-content: center;
     border-radius: 10rem;
 
+    @media only screen and (max-width: $bp-small) {
+        top: 7rem;
+        position: absolute;
+        /* margin: 0 auto; */
+        left: -1.5%;
+        /* padding: 1.5rem 1rem; */
+        width: 100%;
+    }
+
     &__input {
         border: none;
         height: 100%;
@@ -92,6 +101,10 @@
         position: absolute;
         top: 1.25rem;
         right: 1.25rem;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 }
 
@@ -109,6 +122,10 @@
     &__list {
         list-style: none;
         margin-top: 3rem;
+
+        @media only screen and (max-width: $bp-medium) {
+            margin-top: 0;
+        }
     }
 
     &__item {
@@ -121,8 +138,17 @@
 
         position: relative;
 
+        @media only screen and (max-width: $bp-medium) {
+            flex: 1;
+            justify-content: center;
+        }
+
         &:not(:last-child) {
             margin-bottom: 0.5rem;
+
+            @media only screen and (max-width: $bp-medium) {
+                margin-bottom: 0;
+            }
         }
     }
 
@@ -153,6 +179,10 @@
         height: 1.75rem;
         margin-right: 2rem;
         fill: currentColor;
+
+        @media only screen and (max-width: $bp-small) {
+            display: none;
+        }
     }
 
     &__link:link,
@@ -163,6 +193,10 @@
 
         display: flex;
         z-index: 100;
+
+        @media only screen and (max-width: $bp-small) {
+            padding: 1.5rem 0.5rem;
+        }
     }
 }
 
@@ -174,6 +208,10 @@
 .legal {
     padding: 1.5rem;
     text-align: center;
+
+    @media only screen and (max-width: $bp-medium) {
+        display: none;
+    }
 }
 
 .gallery {
@@ -195,6 +233,10 @@
 
     &__stars {
         margin-right: auto;
+
+        @media only screen and (max-width: $bp-small) {
+            display: none;
+        }
     }
 
     &__icon-star,
@@ -273,6 +315,11 @@
     display: flex;
 
     font-size: 1.4rem;
+
+    @media only screen and (max-width: $bp-small) {
+        flex-direction: column;
+        padding: 2rem 0;
+    }
 }
 
 .description {
@@ -347,11 +394,16 @@
 
 .user-reviews {
     flex: 1;
-    padding: 0 3rem;
+    padding: 0 0 0 6rem;
 
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    @media only screen and (max-width: $bp-small) {
+        padding: 0;
+        margin-top: 2rem;
+    }
 }
 
 .review {
@@ -425,6 +477,11 @@
         font-weight: 300;
         text-transform: uppercase;
         margin-bottom: 1rem;
+
+        @media only screen and (max-width: $bp-small) {
+            width: 70%;
+            text-align: center;
+        }
     }
 }
 

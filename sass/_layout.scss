@@ -1,8 +1,12 @@
 .container {
-    width: 1220px;
+    max-width: 120rem;
     background-color: var(--color-grey-light-1);
     box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
     margin: 10rem auto;
+
+    @media only screen and (max-width: $bp-largest) {
+        margin: 0 auto;
+    }
 }
 
 .header {
@@ -13,14 +17,29 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    @media only screen and (max-width: $bp-small) {
+        position: relative;
+        margin-bottom: 5rem;
+    }
 }
 
 .content {
     display: flex;
+
+    @media only screen and (max-width: $bp-medium) {
+        flex-direction: column;
+    }
 }
 
 .sidebar {
     flex: 0 0 18%;
+
+    &__list {
+        @media only screen and (max-width: $bp-medium) {
+            display: flex;
+        }
+    }
 }
 
 .hotel-view {

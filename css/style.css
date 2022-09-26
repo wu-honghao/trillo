@@ -25,7 +25,7 @@
 html {
   box-sizing: border-box;
   font-size: 62.5%; }
-  @media only screen and (max-width: 68.75em) {
+  @media only screen and (max-width: 62.5em) {
     html {
       font-size: 50%; } }
 
@@ -46,6 +46,14 @@ body {
   flex: 0 0 40%;
   justify-content: center;
   border-radius: 10rem; }
+  @media only screen and (max-width: 37.5em) {
+    .search {
+      top: 7rem;
+      position: absolute;
+      /* margin: 0 auto; */
+      left: -1.5%;
+      /* padding: 1.5rem 1rem; */
+      width: 100%; } }
   .search__input {
     border: none;
     height: 100%;
@@ -103,7 +111,10 @@ body {
     text-align: center;
     position: absolute;
     top: 1.25rem;
-    right: 1.25rem; }
+    right: 1.25rem;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
 
 .logo {
   height: 3.25rem;
@@ -117,6 +128,9 @@ body {
   .sidebar__list {
     list-style: none;
     margin-top: 3rem; }
+    @media only screen and (max-width: 56.25em) {
+      .sidebar__list {
+        margin-top: 0; } }
   .sidebar__item {
     display: flex;
     align-items: center;
@@ -124,8 +138,15 @@ body {
     text-transform: uppercase;
     font-size: 1.4rem;
     position: relative; }
+    @media only screen and (max-width: 56.25em) {
+      .sidebar__item {
+        flex: 1;
+        justify-content: center; } }
     .sidebar__item:not(:last-child) {
       margin-bottom: 0.5rem; }
+      @media only screen and (max-width: 56.25em) {
+        .sidebar__item:not(:last-child) {
+          margin-bottom: 0; } }
   .sidebar__item::before {
     content: '';
     width: 3px;
@@ -146,12 +167,18 @@ body {
     height: 1.75rem;
     margin-right: 2rem;
     fill: currentColor; }
+    @media only screen and (max-width: 37.5em) {
+      .sidebar__icon {
+        display: none; } }
   .sidebar__link:link, .sidebar__link:visited {
     color: inherit;
     text-decoration: none;
     padding: 1.5rem 3rem;
     display: flex;
     z-index: 100; }
+    @media only screen and (max-width: 37.5em) {
+      .sidebar__link:link, .sidebar__link:visited {
+        padding: 1.5rem 0.5rem; } }
 
 .hotel-view {
   background-color: #fff;
@@ -160,6 +187,9 @@ body {
 .legal {
   padding: 1.5rem;
   text-align: center; }
+  @media only screen and (max-width: 56.25em) {
+    .legal {
+      display: none; } }
 
 .gallery {
   display: flex; }
@@ -175,6 +205,9 @@ body {
   justify-content: space-between; }
   .overview__stars {
     margin-right: auto; }
+    @media only screen and (max-width: 37.5em) {
+      .overview__stars {
+        display: none; } }
   .overview__icon-star, .overview__icon-location {
     width: 1.75rem;
     height: 1.75rem;
@@ -226,6 +259,10 @@ body {
   padding: 4.5rem;
   display: flex;
   font-size: 1.4rem; }
+  @media only screen and (max-width: 37.5em) {
+    .details {
+      flex-direction: column;
+      padding: 2rem 0; } }
 
 .description {
   flex: 0 0 60%;
@@ -279,10 +316,14 @@ body {
 
 .user-reviews {
   flex: 1;
-  padding: 0 3rem;
+  padding: 0 0 0 6rem;
   display: flex;
   flex-direction: column;
   align-items: center; }
+  @media only screen and (max-width: 37.5em) {
+    .user-reviews {
+      padding: 0;
+      margin-top: 2rem; } }
 
 .review {
   box-shadow: var(--shadow-light);
@@ -334,6 +375,10 @@ body {
     font-weight: 300;
     text-transform: uppercase;
     margin-bottom: 1rem; }
+    @media only screen and (max-width: 37.5em) {
+      .cta__book-now {
+        width: 70%;
+        text-align: center; } }
 
 .btn {
   border: none;
@@ -363,10 +408,13 @@ body {
     animation: pulsate 0.4s infinite; }
 
 .container {
-  width: 1220px;
+  max-width: 120rem;
   background-color: var(--color-grey-light-1);
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
   margin: 10rem auto; }
+  @media only screen and (max-width: 75em) {
+    .container {
+      margin: 0 auto; } }
 
 .header {
   background-color: var(--color-grey-light-1);
@@ -375,12 +423,22 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between; }
+  @media only screen and (max-width: 37.5em) {
+    .header {
+      position: relative;
+      margin-bottom: 5rem; } }
 
 .content {
   display: flex; }
+  @media only screen and (max-width: 56.25em) {
+    .content {
+      flex-direction: column; } }
 
 .sidebar {
   flex: 0 0 18%; }
+  @media only screen and (max-width: 56.25em) {
+    .sidebar__list {
+      display: flex; } }
 
 .hotel-view {
   flex: 1; }
